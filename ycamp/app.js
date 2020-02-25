@@ -26,9 +26,9 @@ if(process.env.SEED_DB) {
 const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("static"));
-app.use(express.static("../../resources/css/lib"));
-app.use(express.static("../../resources/img"));
-app.use(express.static("../../resources/js/lib"));
+app.use(express.static("../resources/css/lib"));
+app.use(express.static("../resources/img"));
+app.use(express.static("../resources/js/lib"));
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride("_method"));

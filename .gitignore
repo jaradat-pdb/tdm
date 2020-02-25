@@ -1,6 +1,3 @@
-# Compiled class file
-*.class
-
 # Log file
 *.log
 
@@ -9,6 +6,13 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+# npm packages
+mods/sec034_authentication
+node_modules/
+package-lock.json
+!apps/bloggo/package-lock.json
+!apps/ycamp/package-lock.json
 
 # Package Files #
 *.jar

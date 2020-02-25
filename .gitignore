@@ -9,6 +9,7 @@
 
 # npm packages
 mods/sec034_authentication
+resources/mp3/
 node_modules/
 package-lock.json
 !apps/bloggo/package-lock.json

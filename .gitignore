@@ -7,13 +7,36 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
-# npm packages
-mods/sec034_authentication
-resources/mp3/
-node_modules/
-package-lock.json
-!apps/bloggo/package-lock.json
-!apps/ycamp/package-lock.json
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+# STS #
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA #
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans #
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+
+# VS Code #
+.vscode/
 
 # Package Files #
 *.jar

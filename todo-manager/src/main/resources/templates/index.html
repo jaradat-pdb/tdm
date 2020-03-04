@@ -10,21 +10,7 @@
 		<title>Index Page</title>
 	</head>
 	<body>
-		<section id="header">
-			<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-				<a class="navbar-brand" href="#">TDM</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-controls="navigation links" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navLinks">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link" th:href="@{/about}">About</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
-		</section>
+		<section id="header" th:replace="fragments/navbar :: navbar-header"></section>
 
 		<section id="todocontainer">
 			<h2 class="text-center">Welcome to ToDo Manager</h2>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>View Todo Modal Fragment</title>
+	</head>
+	<body>
+		<div class="modal fade" id="viewTodoModal" tabindex="-1" role="dialog" aria-labelledby="viewTodoModalLabel" aria-hidden="true" th:fragment="view-todo-modal">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="viewModalTitle">ToDo</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form th:action="@{/todos/new}" method="POST" enctype="multipart/form-data">
+							<div class="form-group">
+								<label for="todoItem">ToDo</label>
+								<input type="text" class="form-control" name="todoItem" id="todoItem" aria-describedby="todoItem" placeholder="Enter ToDo">
+							</div>
+							<div class="form-group">
+								<label for="todoStatusSelect">Status</label>
+								<select class="form-control" name="todoStatus" id="todoStatusSelect">
+									<option>Yes</option>
+									<option>No</option>
+								</select>
+							</div>
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Add ToDo</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

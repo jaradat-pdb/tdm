@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Navbar Fragment(s)</title>
+	</head>
+	<body>
+		<section id="navbar-header" th:fragment="navbar-header">
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Navbar header">
+				<a class="navbar-brand" href="/">TDM</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navLinks" aria-controls="navigation links" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navLinks">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" th:href="@{/about}">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" th:href="@{/logout}">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+
+		<section id="navbar-footer" th:fragment="navbar-footer">
+			<nav aria-label="Navbar footer"></nav>
+		</section>
+	</body>
+</html>

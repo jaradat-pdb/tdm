@@ -44,18 +44,6 @@ public class TodoController {
 		this.todoRepository = todoRepository;
 	}
 
-	@GetMapping
-	public String index() {
-		return "index";
-	}
-
-	/*
-	 * ROUTES
-	 * todos -> displays all todos
-	 * todos/new -> create a new todo
-	 * todos/update/{id} -> toggles the status of a specific todo
-	 * todos/delete/{id} -> delete a specific todo
-	 */
 	@GetMapping("/todos")
 	public String todos(Model model) {
 		model.addAttribute(modelAttrName, todoRepository.findAll());

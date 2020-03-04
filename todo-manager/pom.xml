@@ -14,7 +14,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>todo-manager</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Todo Manager Project</description>
+	<repositories>
+		<repository>
+			<name>Todo Manager GitHub Repository</name>
+			<url>https://github.com/jaradat-pdb/tdm</url>
+		</repository>
+	</repositories>
 
 	<properties>
 		<java.version>1.8</java.version>

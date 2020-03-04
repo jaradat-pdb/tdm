@@ -43,11 +43,11 @@ public class TodoManagerBootstrap implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Collection<Todo> todos = Arrays.asList(
-				new Todo("Complete part 2 of this tutorial", "No"),
+				new Todo("Complete part 2 of this tutorial", "Yes"),
 				new Todo("Fix ycamp site for mobile and xs screens", "No"),
 				new Todo("Finish Web Developer Bootcamp", "Yes"),
 				new Todo("Finish reading Ayyuha alWalid", "Yes"));
-		// todos.forEach(todoRepository::save); ==> https://stackoverflow.com/questions/27015495/meaning-of-in-java-syntax
-		todoRepository.saveAll(todos);
+//		More info => https://stackoverflow.com/questions/27015495/meaning-of-in-java-syntax
+		todos.forEach(todoRepository::save);
 	}
 }

@@ -16,7 +16,7 @@
 			<h2 class="display-2 text-center">Checkout Form</h2>
 			<form th:object="${checkoutCommand}" th:action="@{/doCheckout}" method="POST" enctype="multipart/form-data">
 				<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-					<p th:text="#{checkoutCommand.hasErrors}">Error Message</p>
+					<p th:text="#{command.hasErrors}">Error Message</p>
 				</div>
 
 				<div class="form-group" th:class="${#fields.hasErrors('firstName')} ? 'form-group has-error' : 'form-group'">

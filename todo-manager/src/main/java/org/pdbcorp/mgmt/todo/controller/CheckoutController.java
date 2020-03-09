@@ -21,6 +21,7 @@ import javax.validation.Valid;
 
 import org.pdbcorp.mgmt.todo.command.CheckoutCommand;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -32,14 +33,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class CheckoutController {
 	@GetMapping("/checkout")
-	public String checkout() {
-		return "checkout";
+	public String checkout(Model model) {
+		model.addAttribute("checkoutCommand", new CheckoutCommand());
+		return "checkoutForm";
 	}
 
 	@PostMapping("/doCheckout")
 	public String doCheckout(@Valid CheckoutCommand checkoutCommand, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) {
-			return "checkout";
+			return "checkoutForm";
 		}
 		return "checkoutComplete";
 	}

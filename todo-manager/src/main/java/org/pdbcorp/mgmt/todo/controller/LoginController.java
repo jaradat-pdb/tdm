@@ -17,14 +17,10 @@
  */
 package org.pdbcorp.mgmt.todo.controller;
 
-import javax.validation.Valid;
-
 import org.pdbcorp.mgmt.todo.command.LoginCommand;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 
 /**
  * @author jaradat-pdb
@@ -32,17 +28,9 @@ import org.springframework.web.bind.annotation.PostMapping;
  */
 @Controller
 public class LoginController {
-	@GetMapping("/loginForm")
+	@GetMapping("/login")
 	public String login(Model model) {
 		model.addAttribute("loginCommand", new LoginCommand());
 		return "loginForm";
-	}
-
-	@PostMapping("/doLogin")
-	public String doLogin(@Valid LoginCommand loginCommand, BindingResult bindingResult) {
-		if(bindingResult.hasErrors()) {
-			return "loginForm";
-		}
-		return "redirect:/";
 	}
 }

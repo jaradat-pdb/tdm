@@ -30,7 +30,7 @@ import lombok.Data;
 public class LoginCommand {
 	@NotEmpty
 	@Size(min = 2, max = 30)
-	private String userName;
+	private String username;
 
 	@NotEmpty
 	@Size(min = 8, max = 50)

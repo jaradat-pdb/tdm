@@ -36,13 +36,13 @@ public class TodoManagerApplicationSecurity extends WebSecurityConfigurerAdapter
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		http.authorizeRequests()
-			.antMatchers("/", "/css/**", "/js/**", "/**/favicon.ico").permitAll()
+			.antMatchers("/", "/secured", "/css/**", "/js/**", "/**/favicon.ico").permitAll()
 			.antMatchers("/todos", "/checkout", "/doCheckout").hasRole(USER_ROLE)
 			.antMatchers("/admin", "/h2/**", "/actuator/health").hasRole(ADMIN_ROLE)
 			.antMatchers("/initiateShutdown", "/actuator/**").access("hasRole('" + ROOT_ROLE + "')")
 			.anyRequest().authenticated()
 			.and()
-			.formLogin().loginPage("/login").permitAll()
+			.formLogin().loginPage("/login").defaultSuccessUrl("/secured").permitAll()
 			.and()
 			.logout().permitAll();
 		http.exceptionHandling().accessDeniedPage("/error");

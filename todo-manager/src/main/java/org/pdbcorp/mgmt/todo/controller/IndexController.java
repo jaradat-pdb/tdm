@@ -35,4 +35,9 @@ public class IndexController {
 	public String error() {
 		return "error";
 	}
+
+	@GetMapping("/secured")
+	public String secured() {
+		return "secured";
+	}
 }
